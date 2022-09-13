@@ -6,7 +6,7 @@ import '../style.css'
 const Selector = () => {
     const userArr = [];
     const [selected, setSelected] = useState([]);
-    const isAllSelected = userArr.length > 0 && selected.length === userArr.length;
+    const isAllSelected = options1.length > 0 && selected.length === options1.length;
 
         const updatedUsers = options2.map((val) => (
             val.employees.map((emp) => (
@@ -19,11 +19,16 @@ const Selector = () => {
     const handleChange = (event) => {
         const value = event.target.value;
         if (value[value.length - 1] === 'all') {
-            setSelected(selected.length === userArr.length ? [] : userArr);
+            setSelected(selected.length === options1.length ? [] : options1);
             return;
         }
         setSelected(value);
     };
+
+    const Confirmation = () => {
+        const [isOpen, setIsOpen] = useState(true);
+    }
+
 
     return(
         <React.Fragment>
@@ -40,11 +45,11 @@ const Selector = () => {
                     <ListItemIcon>
                         <Checkbox
                         checked={isAllSelected}
-                        indeterminate={selected.length > 0 && selected.length < userArr.length}/>
+                        indeterminate={selected.length > 0 && selected.length < options1.length}/>
                     </ListItemIcon>
                     <ListItemText primary="Select All"/>
                 </MenuItem>
-                {userArr.map((option) => (
+                {options1.map((option) => (
                     <MenuItem key={option} value={option}>
                         <ListItemIcon>
                             <Checkbox checked={selected.indexOf(option) > -1} />
