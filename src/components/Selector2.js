@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Checkbox, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select } from '@mui/material';
 import { options1, options2 } from '../utils/data';
 import '../style.css'
