@@ -14,9 +14,16 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="App">
+      <div>
+        <h1>User Array Section</h1>
       <UserArray/>
+      </div>
+
+      <div>
+        <h1>Selector Section</h1>
       <Selector/>
       {/* <Content/> */}
+      </div>
 
       <div style={Button_Wrapper_Styles}>
         <button onClick={() => setIsOpen(true)}>Open</button>
@@ -32,3 +39,4 @@ function App() {
 }
 
 export default App;
+

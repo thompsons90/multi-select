@@ -41,20 +41,20 @@ const Selector = () => {
 
     return(
         <React.Fragment>
-        <h1>Multi-Select Practice Project</h1>
-        <div className="chip-dip">
+        <h2>Multi-Select Practice Project</h2>
+        {/* <div className="chip-dip">
             <Chip label="A Chip" color="success" icon={<Adb/>}/>
             <Chip label="B Chip" color="primary" clickable onClick={() => alert('Clicked')}/>
             <Chip label="C Chip" color="secondary" size="small" avatar={<Avatar>S</Avatar>}/>
             <Chip label="D Chip" color="warning" variant="outlined" icon={<AccountBalanceWallet/>}/>
             <Chip label="E Chip" color="info" size="small" icon={<FaceIcon />}/>
             <Chip label="Delete" color="error" onClick={() => alert('Clicked')} onDelete={() => alert('Delete handler called')}/>
-        </div>
-        {
+        </div> */}
+        {/* {
             options1.map(chip => (
                 <Chip key={chip} label={chip} onDelete={() => handleDelete(chip)} />
             ))
-        }
+        } */}
 
 
         <FormControl className="form1">

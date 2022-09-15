@@ -44,8 +44,8 @@ const Selector = () => {
                 value="all">
                     <ListItemIcon>
                         <Checkbox
-                        checked={isAllSelected}
-                        indeterminate={selected.length > 0 && selected.length < options1.length}/>
+                            checked={isAllSelected}
+                            indeterminate={selected.length > 0 && selected.length < options1.length}/>
                     </ListItemIcon>
                     <ListItemText primary="Select All"/>
                 </MenuItem>
