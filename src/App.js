@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import Content from "./components/Selector2";
-import Modal from './components/Modal';
-import Selector from './components/selector';
+import ChipUpdate from './components/ChipUpdate';
+import Demo from './components/Demo';
+import ChipPractice from './components/SelectPractice';
+// import Content from "./components/Selector2";
+// import Modal from './components/Modal';
+// import Selector from './components/selector';
 import UserArray from './components/UserArray';
 
 const Button_Wrapper_Styles = {
@@ -15,14 +18,26 @@ function App() {
   return (
     <div className="App">
       <div>
+        Newest attempt
+        <ChipUpdate/>
+     
+      </div>
+
+
+
+      {/* <div>
+        <ChipPractice/>
+      </div> */}
+      <div>
         <h1>User Array Section</h1>
+        <Demo/>
       <UserArray/>
       </div>
 
-      <div>
+      {/* <div>
         <h1>Selector Section</h1>
       <Selector/>
-      {/* <Content/> */}
+   
       </div>
 
       <div style={Button_Wrapper_Styles}>
@@ -32,7 +47,7 @@ function App() {
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         Ooooh Fancy
         <Content/>
-      </Modal>
+      </Modal> */}
       
     </div>
   );

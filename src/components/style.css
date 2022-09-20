@@ -1,0 +1,12 @@
+.poppin-style {
+    color: black;
+    background-color: red;
+    border: 2px solid blue;
+}
+
+.chip-container, .current-container {
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+

@@ -15,29 +15,24 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import './style.css';
 
-export function Tags() {
-  const [selected, setSelected] = useState([]);
-  const isAllSelected =
-    options1.length > 0 && selected.length === options1.length;
 
-  const handleChange = (event) => {
-    const value = event.target.value;
-    if (value[value.length - 1] === "all") {
-      setSelected(selected.length === options1.length ? [] : options1);
-      return;
-    }
-    setSelected(value);
-  };
+const UserArray = () => {
+  // const [selected, setSelected] = useState([]);
+  // const isAllSelected =
+  //   options1.length > 0 && selected.length === options1.length;
 
-  // const handleChipDelete = (value) => {
-  //   setPersonName((chips) => chips.filter((chip) => chip.id !== value.id))
-  //  console.log('delete clicked')
-  // }
+  // const handleChange = (event) => {
+  //   const value = event.target.value;
+  //   if (value[value.length - 1] === "all") {
+  //     setSelected(selected.length === options1.length ? [] : options1);
+  //     return;
+  //   }
+  //   setSelected(value);
+  // };
 
-  const handleDelete = (event) => {
-    console.log("delete handled");
-  };
+
 
   // ------------WORKING DELETABLE CHIP LOGIC -----------------
 
@@ -53,70 +48,24 @@ export function Tags() {
     "Virginia Andrews",
     "Kelly Snyder",
   ];
-  const initialSelected = ["April Tucker", "Ralph Hubbard"];
-  const UserArray = () => {
-    // const classes = useStyles();
-    const [personName, setPersonName] = React.useState(initialSelected);
-    const handleChange = (event) => {
-      setPersonName(event.target.value);
-    };
-    const handleDelete = (e, value) => {
-      e.preventDefault();
-      console.log("clicked delete");
-      setPersonName((current) => (current, value));
-    };
+  // const initialSelected = ["April Tucker", "Ralph Hubbard"];
+  // const UserArray = () => {
+  //   // const classes = useStyles();
+  //   const [personName, setPersonName] = React.useState(initialSelected);
+  //   const handleChange = (event) => {
+  //     setPersonName(event.target.value);
+  //   };
+  //   const handleDelete = (e, value) => {
+  //     e.preventDefault();
+  //     console.log("clicked delete");
+  //     setPersonName((current) => (current, value));
+  //   };
     return (
-      <>
-        <div className="working-deletable-chip">
-          <div>
-            <div>
-              <FormControl className="form">
-                <InputLabel id="demo-mutiple-chip-checkbox-label">
-                  Chip + Check"
-                </InputLabel>
-                <Select
-                  labelId="demo-mutiple-chip-checkbox-label"
-                  id="demo-mutiple-chip-checkbox"
-                  multiple
-                  value={personName}
-                  onChange={handleChange}
-                  onOpen={() => console.log("select opened")}
-                  //input={<Input />}
-                  // MenuProps={MenuProps}
-                  IconComponent={KeyboardArrowDownIcon}
-                  renderValue={(selected) => (
-                    <div className="chips">
-                      {selected.map((value) => (
-                        <Chip
-                          key={value}
-                          label={value}
-                          clickable
-                          deleteIcon={
-                            <CloseIcon
-                              onMouseDown={(event) => event.stopPropagation()}
-                            />
-                          }
-                          className="chips"
-                          onDelete={(e) => handleDelete(e, value)}
-                          onClick={() => console.log("clicked chip")}
-                        />
-                      ))}
-                    </div>
-                  )}
-                >
-                  {names.map((name) => (
-                    <MenuItem key={name} value={name}>
-                      <Checkbox checked={personName.includes(name)} />
-                      <ListItemText primary={name} />
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </div>
-          </div>
-        </div>
-
+      <div className="chip-container">
+     
+      <h2 >Working examples that use the chips</h2>
         <Stack spacing={3} sx={{ width: 500 }}>
+          
           <Autocomplete
             multiple
             id="tags-outlined"
@@ -124,11 +73,15 @@ export function Tags() {
             // getOptionLabel={(option) => option.title}
             // defaultValue={[top100Films[13]]}
             filterSelectedOptions
+            
             renderInput={(params) => (
               <TextField
                 {...params}
                 label="filterSelectedOptions"
                 placeholder="Favorites"
+                SelectProps={{
+                  multiple: true
+                }}
               />
             )}
           />
@@ -149,11 +102,11 @@ export function Tags() {
           />
         )}
       /> */}
-        {/* <Autocomplete
+        <Autocomplete
         multiple
         id="tags-filled"
-        options={top100Films.map((option) => option.title)}
-        defaultValue={[top100Films[13].title]}
+        options={options1}
+        // defaultValue={[top100Films[13].title]}
         freeSolo
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
@@ -168,16 +121,13 @@ export function Tags() {
             placeholder="Favorites"
           />
         )}
-      /> */}
+      />
 
         {/* </Stack> */}
-      </>
+      </div>
     );
   };
-}
-
 export default UserArray;
-
 
 
 
