@@ -57,7 +57,8 @@ const Demo = () => {
             multiple 
             value={selected}
             onChange={handleChange}
-            
+            disableCloseOnSelect
+            filterSelectedOptions
             renderValue={(selected) => (
                 // selected.join(', ')}>
                 selected.join(', ')
