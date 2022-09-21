@@ -63,7 +63,7 @@ const UserArray = () => {
     return (
       <div className="chip-container">
      
-      <h2 >Working examples that use the chips</h2>
+      <h2 >Working examples that use the chips (UserArray Component)</h2>
         <Stack spacing={3} sx={{ width: 500 }}>
           
           <Autocomplete
@@ -73,7 +73,7 @@ const UserArray = () => {
             // getOptionLabel={(option) => option.title}
             // defaultValue={[top100Films[13]]}
             filterSelectedOptions
-            
+            disableCloseOnSelect
             renderInput={(params) => (
               <TextField
                 {...params}
@@ -105,6 +105,7 @@ const UserArray = () => {
         <Autocomplete
         multiple
         id="tags-filled"
+        disableCloseOnSelect
         options={options1}
         // defaultValue={[top100Films[13].title]}
         freeSolo

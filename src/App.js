@@ -6,6 +6,7 @@ import ChipPractice from './components/SelectPractice';
 // import Modal from './components/Modal';
 // import Selector from './components/selector';
 import UserArray from './components/UserArray';
+import WorkingEx from './components/WorkingEx';
 
 const Button_Wrapper_Styles = {
   position: 'relative',
@@ -18,21 +19,24 @@ function App() {
   return (
     <div className="App">
       <div>
+        <WorkingEx/>
+      </div>
+      {/* <div>
         Newest attempt
         <ChipUpdate/>
      
-      </div>
+      </div> */}
 
 
 
       {/* <div>
         <ChipPractice/>
       </div> */}
-      <div>
+      {/* <div>
         <h1>User Array Section</h1>
         <Demo/>
       <UserArray/>
-      </div>
+      </div> */}
 
       {/* <div>
         <h1>Selector Section</h1>

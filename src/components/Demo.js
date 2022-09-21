@@ -49,7 +49,7 @@ const Demo = () => {
 
     return(
         <React.Fragment>
-        <h2>Working example that uses Checkbox (Demo)</h2>
+        <h2>Working example that uses Checkbox (Demo Component)</h2>
         <FormControl className="form1">
             <InputLabel id="user-assignment-label">User Assignment</InputLabel>
             <Select

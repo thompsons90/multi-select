@@ -138,9 +138,9 @@ const ChipUpdate = () => {
         multiple
         options={options}
         // disableCloseOnSelect
-        getOptionLabel={(option) => option.title}
+        
         value={state.selectedOptions}
-        renderTags={(values, getTagProps) =>
+        renderTags={(values, getTagProps) =>(
           values.map((value, index) => (
             <Chip
               key={value.id}
@@ -151,19 +151,12 @@ const ChipUpdate = () => {
               }}
             />
           ))
-        }
+          )}
         getOptionSelected={(option, value) => option.id === value.id}
-        renderOption={(option, { selected }) => (
-          <React.Fragment>
-            <Checkbox
-              icon={icon}
-              checkedIcon={checkedIcon}
-              style={{ marginRight: 8 }}
-              checked={selected}
-            />
-            {option.title}
-          </React.Fragment>
-        )}
+        getOptionLabel={(option) => `${option.title}`}
+        renderOption={option => {
+            return `${option.title}`
+        }}
         style={{ width: 500 }}
         onChange={handleChange}
         renderInput={(params) => (
@@ -175,7 +168,7 @@ const ChipUpdate = () => {
           />
         )}
       />
-      <Button
+      {/* <Button
         variant="contained"
         color="secondary"
         onClick={() =>
@@ -196,7 +189,7 @@ const ChipUpdate = () => {
       >
         Simulate changes from outside
       </Button>
-      <pre>{JSON.stringify(state, null, 2)}</pre>
+      <pre>{JSON.stringify(state, null, 2)}</pre> */}
 
 
 
