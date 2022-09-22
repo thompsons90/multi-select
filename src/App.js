@@ -3,6 +3,8 @@ import ChipUpdate from './components/ChipUpdate';
 import Demo from './components/Demo';
 // import Content from "./components/Selector2";
 import Modal from './components/Modal';
+// import SelectAllChips from './components/SelectAllChips';
+import SelectAllParent from './components/SelectAllParent';
 
 
 
@@ -24,6 +26,10 @@ function App() {
         Ooooh fancy modal ya got der don't ya know!
         <ChipUpdate/>
       </Modal> 
+      <div>
+<h1>Could this be the one?</h1>
+<SelectAllParent/>
+        </div>
       <div>
         <h1>The one that works: (ChipUpdate)</h1>
         <ChipUpdate/>

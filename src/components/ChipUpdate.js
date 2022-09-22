@@ -1,18 +1,18 @@
 import React, { useReducer, useState } from "react";
-import Chip from "@mui/material/Chip";
+// import Chip from "@mui/material/Chip";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
-import { options1 } from "../utils/data";
+// import Stack from "@mui/material/Stack";
+// import { options1 } from "../utils/data";
 import {
-    Button,
+    // Button,
   Checkbox,
-  FormControl,
-  InputLabel,
-  ListItemIcon,
-  ListItemText,
-  MenuItem,
-  Select
+  // FormControl,
+  // InputLabel,
+  // ListItemIcon,
+  // ListItemText,
+  // MenuItem,
+  // Select
 } from "@mui/material";
 import './style.css';
 import { movies } from "../utils/data";
@@ -52,9 +52,9 @@ const ChipUpdate = () => {
     // };
     const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
     const checkedIcon = <CheckBoxIcon fontSize="small" />;
-    const [selected, setSelected] = useState([]);
+    // const [selected, setSelected] = useState([]);
     const initialState = { selectedOptions: [] };
-    const isAllSelected = movies.length > 0 && selected.length === movies.length;
+    // const isAllSelected = movies.length > 0 && selected.length === movies.length;
     
 
   //   const handleChange = (event) => {
