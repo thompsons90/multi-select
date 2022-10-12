@@ -24,20 +24,8 @@ function App() {
         Ooooh fancy modal ya got der don't ya know!
         <ChipUpdate />
       </Modal>
-
       <div>
-        <h1>Could this be the one?</h1>
         <Combo />
-      </div>
-
-      <div>
-        <h1>The one that works: (ChipUpdate)</h1>
-        <ChipUpdate />
-      </div>
-
-      <div>
-        <h1>Working Select All Dropdown: (Demo)</h1>
-        <Demo />
       </div>
     </div>
   );
