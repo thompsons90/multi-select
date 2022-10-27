@@ -1,3 +1,10 @@
-.form1, .form2 {
-    width: 300px;
+.form1,
+.form2 {
+  width: 300px;
+}
+
+.workingStateCopy {
+  border: 3px solid green;
+  padding: 5px;
+  margin: 15px 0px;
 }

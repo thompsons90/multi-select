@@ -1,52 +1,77 @@
-import React from "react";
-import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
-import { Checkbox } from "@mui/material";
-import "./style.css";
-import { options1, options2, movies } from "../utils/data";
+import React, { useState } from "react";
+import { Autocomplete, TextField } from "@mui/material";
+import { options2 } from "../utils/data";
 
-const ChipUpdate = () => {
-  const empArr = [];
-  const nameArr = [];
+const Combo = () => {
+  const [value, setValue] = useState([]);
+  const [selectedValue, setSelectedValue] = useState("");
+  console.log(value);
 
-  const userNames = [];
+  const options = []; // this array holds all employee names to select from
   const vals = Object.values(options2);
-  for (let i = 0, len = vals.length; i < len; i++) {
-    // console.log(vals[i].employees);
-    let stats = vals[i].employees;
-    for (let j = 0; j < stats.length; j++) {
-      // console.log(stats[j]["name"]);
-      userNames.push(stats[j]["name"]);
-    }
-  }
-  console.log(userNames);
-  // -------------------------------
+  vals.map((data) => {
+    data.employees.map((data) => {
+      // console.log(data.name);
+      options.push(data.name);
+    });
+  });
+
+  // DO NOT DELETE this section stores the user input and then add it to the value once submitted
+  const [inputValue, setInputValue] = useState("");
+
+  const addInput = (employee) => {
+    let addedEmployee = employee;
+    setValue([...value, addedEmployee]);
+    setSelectedValue("");
+  };
+  console.log(inputValue);
+
+  const handleSubmit = (event, submitValue) => {
+    event.preventDefault();
+    // console.log(event);
+    // console.log(submitValue);
+  };
   return (
-    <div className="current-container">
-      <h2>Most Current Version</h2>
+    <>
+      <h3>Combo</h3>
+
       <Autocomplete
         multiple
-        id="chip-update-demo"
+        freeSolo
         limitTags={4}
-        options={userNames}
         disableCloseOnSelect
         filterSelectedOptions
-        // onChange={handleChange}
-        getOptionLabel={(option) => option}
-        renderOption={(props, option, { selected }) => (
-          <>
-            <li {...props}>
-              <Checkbox checked={selected} />
-              {option}
-            </li>
-          </>
-        )}
-        style={{ width: 500 }}
+        value={value}
+        options={options.sort()}
+        inputValue={selectedValue}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        onInputChange={(event, newSelectedValue) => {
+          setSelectedValue(newSelectedValue);
+          setInputValue(newSelectedValue);
+        }}
         renderInput={(params) => (
-          <TextField {...params} label="Movies" placeholder="Favorites" />
+          <TextField
+            {...inputValue}
+            {...params}
+            inputProps={{
+              ...params.inputProps,
+              onKeyDown: (e) => {
+                if (e.key === "Enter") {
+                  e.stopPropagation();
+                }
+              },
+            }}
+            label="Employees"
+            placeholder="Select Employees"
+          />
         )}
       />
-    </div>
+      <button onClick={() => addInput(selectedValue)}>
+        Add {selectedValue}
+      </button>
+    </>
   );
 };
-export default ChipUpdate;
+export default Combo;

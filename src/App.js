@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import ChipUpdate from "./components/ChipUpdate";
 import Combo from "./components/Combo";
-import Demo from "./components/Demo";
-// import Content from "./components/Selector2";
-import Modal from "./components/Modal";
-// import SelectAllChips from './components/SelectAllChips';
-// import SelectAllParent from './components/SelectAllParent';
+import Todo from "./controledInput/Todo";
+import StateCopy from "./testCode/ExCopy";
 
 const Button_Wrapper_Styles = {
   position: "relative",
@@ -13,18 +9,22 @@ const Button_Wrapper_Styles = {
 };
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="App">
-      <div style={Button_Wrapper_Styles}>
-        <button onClick={() => setIsOpen(true)}>Open</button>
+      <div className="workingStateCopy" style={{ border: "solid 2px red" }}>
+        <p>Working State Copy:</p>
+        <StateCopy />
       </div>
 
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        Ooooh fancy modal ya got der don't ya know!
-        <ChipUpdate />
-      </Modal>
-      <div>
+      <div className="todo-container">
+        <Todo />
+      </div>
+
+      <div
+        className="controlled-input-container"
+        style={{ border: "solid 2px blue" }}
+      >
         <Combo />
       </div>
     </div>
