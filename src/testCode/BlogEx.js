@@ -37,7 +37,7 @@ const ManageableStates = () => {
     }
     setSelected(value);
   };
-  console.log(selected);
+  // console.log(selected);
 
   return (
     <>

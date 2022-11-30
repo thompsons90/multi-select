@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import { options2 } from "../utils/data";
 
-const StateCopy = () => {
+const MultiSelect = () => {
   const [value, setValue] = useState([]);
   const [selectedValue, setselectedValue] = useState("");
-  console.log(value);
+  // console.log(value);
   const options = []; // this array holds all employee names to select from
   const vals = Object.values(options2);
   vals.map((data) => {
@@ -17,6 +17,7 @@ const StateCopy = () => {
 
   return (
     <>
+      <h2>Multi Select</h2>
       <Autocomplete
         multiple
         freeSolo
@@ -43,4 +44,4 @@ const StateCopy = () => {
     </>
   );
 };
-export default StateCopy;
+export default MultiSelect;

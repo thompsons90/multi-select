@@ -2,41 +2,46 @@ import React, { useState } from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import { options2 } from "../utils/data";
 
-const Combo = () => {
-  const [value, setValue] = useState([]);
+const SingleFree = () => {
+  const [value, setValue] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
   console.log(`value: ${value}, selected value: ${selectedValue}`);
 
-  const options = []; // this array holds all employee names to select from
-  const vals = Object.values(options2);
-  vals.map((data) => {
-    data.employees.map((data) => {
-      // console.log(data.name);
-      options.push(data.name);
-    });
-  });
+  // const [options, setOptions] = useState([
+  //   "Manager",
+  //   "Frontend",
+  //   "Backend",
+  //   "Fullstack",
+  //   "Associate",
+  // ]);
+  // console.log(`options: ${options}`);
+  const options = ["Manager", "Frontend", "Backend", "Fullstack", "Associate"];
 
   // DO NOT DELETE this section stores the user input and then add it to the value once submitted
   const [inputValue, setInputValue] = useState("");
 
-  const addInput = (employee) => {
-    let addedEmployee = employee;
-    setValue([...value, addedEmployee]);
+  const addPosition = (position) => {
+    let addedPosition = position;
+    setValue([...value, addedPosition]);
     setSelectedValue("");
   };
 
+  // const addPosition = (selectedValue) => {
+  // options.pop(selectedValue);
+  // let newerPosition = { position: title };
+  // setList([...list, newPosition]);
+  // setNewPosition("");
+  // };
   return (
     <>
-      <h2>Combo</h2>
-
+      <h2>Single FreeSolo</h2>
+      <h3>Department dropdown inside ModalUser</h3>
       <Autocomplete
-        multiple
         freeSolo
-        limitTags={4}
-        disableCloseOnSelect
         filterSelectedOptions
         value={value}
-        options={options.sort()}
+        options={options}
+        // getOptionLabel={options}
         inputValue={selectedValue}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -57,23 +62,25 @@ const Combo = () => {
                 }
               },
             }}
-            label="Employees"
-            placeholder="Select Employees"
+            label="Dept."
+            placeholder="Dept."
           />
         )}
       />
       <button
         style={{
           visibility:
-            selectedValue && selectedValue.length !== 0 ? "visible" : "hidden",
+            value.length < 1 && selectedValue && selectedValue.length !== 0
+              ? "visible"
+              : "hidden",
         }}
-        onClick={() => addInput(selectedValue)}
+        onClick={() => addPosition(selectedValue)}
       >
         Add {selectedValue}
       </button>
       <p>options: {options.join(", ")}</p>
-      <p>value: {value.join(", ")}</p>
+      <p>value: {value}</p>
     </>
   );
 };
-export default Combo;
+export default SingleFree;
