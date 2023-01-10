@@ -1,181 +1,737 @@
 const options1 = [
-    "Oliver Hansen",
-    "Van Henry",
-    "April Tucker",
-    "Ralph Hubbard",
-    "Omar Alexander",
-    "Carlos Abbott",
-    "Miriam Wagner",
-    "Bradley Wilkerson",
-    "Virginia Andrews",
-    "Kelly Snyder"
-  ];
+  "Oliver Hansen",
+  "Van Henry",
+  "April Tucker",
+  "Ralph Hubbard",
+  "Omar Alexander",
+  "Carlos Abbott",
+  "Miriam Wagner",
+  "Bradley Wilkerson",
+  "Virginia Andrews",
+  "Kelly Snyder",
+];
 
-  
-  const options2 = [
-    { 
-      project: 'Banking App',
-      employees: [
-          {
-              empId: 10,
-              performanceScore: 87,
-              name: 'Dave Schlansky',
-              designation: 'Frontend Developer',
-              imageSrc: 'https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=592&q=80',
-          },
-          {
-              empId: 11,
-              performanceScore: 91,
-              name: 'Brenda Zika',
-              designation: 'UX Designer',
-              imageSrc: 'https://images.unsplash.com/photo-1594185230805-68f37369b450?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=646&q=80',
-          },
-          {
-              empId: 12,
-              performanceScore: 72,
-              name: 'Eric Jhonson',
-              designation: 'Project Manager',
-              imageSrc: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-          }
-      ],
-      id: 1,
-      primaryColor: '#0050B8',
-      secondaryColor: '#D0E5FF',
-  }, {
-      project: 'GE Healthcare',
-      employees: [
-          {
-              empId: 13,
-              performanceScore: 65,
-              name: 'Becky Garth',
-              designation: 'Manager',
-              imageSrc: 'https://images.unsplash.com/photo-1573600073955-f15b3b6caab7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=358&q=80'
-          },
-          {
-              empId: 14,
-              performanceScore: 83,
-              name: 'Patrick Raymond',
-              designation: 'Backend Engineer',
-              imageSrc: 'https://images.unsplash.com/photo-1616149477078-d36f7e9f1da9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-          }
-      ],
-      id: 2,
-      primaryColor: '#2dc653',
-      secondaryColor: '#C1F1CD',
-  }, {
-      project: 'Hudson Finance',
-      employees: [
-          {
-              empId: 15,
-              performanceScore: 77,
-              name: 'Miranda Shaffer',
-              designation: 'Lead Developer',
-              imageSrc: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
-          },
-          {
-              empId: 16,
-              performanceScore: 64,
-              name: 'Nicole Harriet',
-              designation: 'Product Designer',
-              imageSrc: 'https://images.unsplash.com/photo-1609107081279-95316710f9fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-          },
-          {
-              empId: 17,
-              performanceScore: 52,
-              name: 'Gordon Mendoza',
-              designation: 'Consultant',
-              imageSrc: 'https://images.unsplash.com/photo-1603384699007-50799748fc45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-          },
-          {
-              empId: 18,
-              performanceScore: 66,
-              name: 'Elliot Watkins',
-              designation: 'Content Support',
-              imageSrc: 'https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-          }
-      ],
-      id: 3,
-      primaryColor: '#fdc500',
-      secondaryColor: '#FFF3C8',
-  }, {
-      project: 'GE Sales',
-      employees: [
-          {
-              empId: 19,
-              performanceScore: 78,
-              name: 'Stuart Crane',
-              designation: 'Quality Assurance',
-              imageSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
-          }
-      ],
-      id: 4,
-      primaryColor: '#bd7ba8',
-      secondaryColor: '#ECD9E6',
-  }  
-];  
+const options2 = [
+  {
+    project: "Banking App",
+    employees: [
+      {
+        empId: 10,
+        performanceScore: 87,
+        name: "Dave Schlansky",
+        designation: "Frontend Developer",
+        imageSrc:
+          "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=592&q=80",
+      },
+      {
+        empId: 11,
+        performanceScore: 91,
+        name: "Brenda Zika",
+        designation: "UX Designer",
+        imageSrc:
+          "https://images.unsplash.com/photo-1594185230805-68f37369b450?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=646&q=80",
+      },
+      {
+        empId: 12,
+        performanceScore: 72,
+        name: "Eric Jhonson",
+        designation: "Project Manager",
+        imageSrc:
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      },
+    ],
+    id: 1,
+    primaryColor: "#0050B8",
+    secondaryColor: "#D0E5FF",
+  },
+  {
+    project: "GE Healthcare",
+    employees: [
+      {
+        empId: 13,
+        performanceScore: 65,
+        name: "Becky Garth",
+        designation: "Manager",
+        imageSrc:
+          "https://images.unsplash.com/photo-1573600073955-f15b3b6caab7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=358&q=80",
+      },
+      {
+        empId: 14,
+        performanceScore: 83,
+        name: "Patrick Raymond",
+        designation: "Backend Engineer",
+        imageSrc:
+          "https://images.unsplash.com/photo-1616149477078-d36f7e9f1da9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      },
+    ],
+    id: 2,
+    primaryColor: "#2dc653",
+    secondaryColor: "#C1F1CD",
+  },
+  {
+    project: "Hudson Finance",
+    employees: [
+      {
+        empId: 15,
+        performanceScore: 77,
+        name: "Miranda Shaffer",
+        designation: "Lead Developer",
+        imageSrc:
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      },
+      {
+        empId: 16,
+        performanceScore: 64,
+        name: "Nicole Harriet",
+        designation: "Product Designer",
+        imageSrc:
+          "https://images.unsplash.com/photo-1609107081279-95316710f9fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      },
+      {
+        empId: 17,
+        performanceScore: 52,
+        name: "Gordon Mendoza",
+        designation: "Consultant",
+        imageSrc:
+          "https://images.unsplash.com/photo-1603384699007-50799748fc45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      },
+      {
+        empId: 18,
+        performanceScore: 66,
+        name: "Elliot Watkins",
+        designation: "Content Support",
+        imageSrc:
+          "https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      },
+    ],
+    id: 3,
+    primaryColor: "#fdc500",
+    secondaryColor: "#FFF3C8",
+  },
+  {
+    project: "GE Sales",
+    employees: [
+      {
+        empId: 19,
+        performanceScore: 78,
+        name: "Stuart Crane",
+        designation: "Quality Assurance",
+        imageSrc:
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+      },
+    ],
+    id: 4,
+    primaryColor: "#bd7ba8",
+    secondaryColor: "#ECD9E6",
+  },
+];
 
 const movies = [
-    { id: 1, title: "The Shawshank Redemption", year: 1994 },
-    { id: 2, title: "The Godfather", year: 1972 },
-    { id: 3, title: "The Godfather: Part II", year: 1974 },
-    { id: 4, title: "The Dark Knight", year: 2008 },
-    { id: 5, title: "12 Angry Men", year: 1957 },
-    { id: 6, title: "Schindler's List", year: 1993 },
-    { id: 7, title: "Pulp Fiction", year: 1994 },
-    {
-      id: 8,
-      title: "The Lord of the Rings: The Return of the King",
-      year: 2003
-    },
-    {
-      id: 9,
-      title: "The Good, the Bad and the Ugly",
-      year: 1966
-    },
-    { id: 10, title: "Fight Club", year: 1999 },
-    {
-      id: 11,
-      title: "The Lord of the Rings: The Fellowship of the Ring",
-      year: 2001
-    },
-    {
-      id: 12,
-      title: "Star Wars: Episode V - The Empire Strikes Back",
-      year: 1980,
-      checked: false
-    },
-    { id: 13, title: "Forrest Gump", year: 1994, checked: false },
-    { id: 14, title: "Inception", year: 2010, checked: false },
-    {
-      id: 15,
-      title: "The Lord of the Rings: The Two Towers",
-      year: 2002
-    },
-    {
-      id: 16,
-      title: "One Flew Over the Cuckoo's Nest",
-      year: 1975
-    },
-    { id: 17, title: "Goodfellas", year: 1990 },
-    { id: 18, title: "The Matrix", year: 1999 },
-    { id: 19, title: "Seven Samurai", year: 1954 },
-    {
-      id: 20,
-      title: "Star Wars: Episode IV - A New Hope",
-      year: 1977
-    },
-    { id: 21, title: "City of God", year: 2002 },
-    { id: 22, title: "Se7en", year: 1995 },
-    { id: 23, title: "The Silence of the Lambs", year: 1991 },
-    { id: 24, title: "It's a Wonderful Life", year: 1946 },
-    { id: 25, title: "Life Is Beautiful", year: 1997 },
-    { id: 26, title: "The Usual Suspects", year: 1995 },
-    { id: 27, title: "Léon: The Professional", year: 1994 },
-    { id: 28, title: "Spirited Away", year: 2001 },
-    { id: 29, title: "Saving Private Ryan", year: 1998 },
-    { id: 30, title: "Once Upon a Time in the West", year: 1968 },
-    { id: 31, title: "American History X", year: 1998 },
-    { id: 32, title: "Interstellar", year: 2014 }
-  ];
+  { id: 1, title: "The Shawshank Redemption", year: 1994 },
+  { id: 2, title: "The Godfather", year: 1972 },
+  { id: 3, title: "The Godfather: Part II", year: 1974 },
+  { id: 4, title: "The Dark Knight", year: 2008 },
+  { id: 5, title: "12 Angry Men", year: 1957 },
+  { id: 6, title: "Schindler's List", year: 1993 },
+  { id: 7, title: "Pulp Fiction", year: 1994 },
+  {
+    id: 8,
+    title: "The Lord of the Rings: The Return of the King",
+    year: 2003,
+  },
+  {
+    id: 9,
+    title: "The Good, the Bad and the Ugly",
+    year: 1966,
+  },
+  { id: 10, title: "Fight Club", year: 1999 },
+  {
+    id: 11,
+    title: "The Lord of the Rings: The Fellowship of the Ring",
+    year: 2001,
+  },
+  {
+    id: 12,
+    title: "Star Wars: Episode V - The Empire Strikes Back",
+    year: 1980,
+    checked: false,
+  },
+  { id: 13, title: "Forrest Gump", year: 1994, checked: false },
+  { id: 14, title: "Inception", year: 2010, checked: false },
+  {
+    id: 15,
+    title: "The Lord of the Rings: The Two Towers",
+    year: 2002,
+  },
+  {
+    id: 16,
+    title: "One Flew Over the Cuckoo's Nest",
+    year: 1975,
+  },
+  { id: 17, title: "Goodfellas", year: 1990 },
+  { id: 18, title: "The Matrix", year: 1999 },
+  { id: 19, title: "Seven Samurai", year: 1954 },
+  {
+    id: 20,
+    title: "Star Wars: Episode IV - A New Hope",
+    year: 1977,
+  },
+  { id: 21, title: "City of God", year: 2002 },
+  { id: 22, title: "Se7en", year: 1995 },
+  { id: 23, title: "The Silence of the Lambs", year: 1991 },
+  { id: 24, title: "It's a Wonderful Life", year: 1946 },
+  { id: 25, title: "Life Is Beautiful", year: 1997 },
+  { id: 26, title: "The Usual Suspects", year: 1995 },
+  { id: 27, title: "Léon: The Professional", year: 1994 },
+  { id: 28, title: "Spirited Away", year: 2001 },
+  { id: 29, title: "Saving Private Ryan", year: 1998 },
+  { id: 30, title: "Once Upon a Time in the West", year: 1968 },
+  { id: 31, title: "American History X", year: 1998 },
+  { id: 32, title: "Interstellar", year: 2014 },
+];
 
-export { movies, options1, options2 };
+const timezones = [
+  {
+    offset: "GMT-12:00",
+    name: "Etc/GMT-12",
+  },
+  {
+    offset: "GMT-11:00",
+    name: "Etc/GMT-11",
+  },
+  {
+    offset: "GMT-11:00",
+    name: "Pacific/Midway",
+  },
+  {
+    offset: "GMT-10:00",
+    name: "America/Adak",
+  },
+  {
+    offset: "GMT-09:00",
+    name: "America/Anchorage",
+  },
+  {
+    offset: "GMT-09:00",
+    name: "Pacific/Gambier",
+  },
+  {
+    offset: "GMT-08:00",
+    name: "America/Dawson_Creek",
+  },
+  {
+    offset: "GMT-08:00",
+    name: "America/Ensenada",
+  },
+  {
+    offset: "GMT-08:00",
+    name: "America/Los_Angeles",
+  },
+  {
+    offset: "GMT-07:00",
+    name: "America/Chihuahua",
+  },
+  {
+    offset: "GMT-07:00",
+    name: "America/Denver",
+  },
+  {
+    offset: "GMT-06:00",
+    name: "America/Belize",
+  },
+  {
+    offset: "GMT-06:00",
+    name: "America/Cancun",
+  },
+  {
+    offset: "GMT-06:00",
+    name: "America/Chicago",
+  },
+  {
+    offset: "GMT-06:00",
+    name: "Chile/EasterIsland",
+  },
+  {
+    offset: "GMT-05:00",
+    name: "America/Bogota",
+  },
+  {
+    offset: "GMT-05:00",
+    name: "America/Havana",
+  },
+  {
+    offset: "GMT-05:00",
+    name: "America/New_York",
+  },
+  {
+    offset: "GMT-04:30",
+    name: "America/Caracas",
+  },
+  {
+    offset: "GMT-04:00",
+    name: "America/Campo_Grande",
+  },
+  {
+    offset: "GMT-04:00",
+    name: "America/Glace_Bay",
+  },
+  {
+    offset: "GMT-04:00",
+    name: "America/Goose_Bay",
+  },
+  {
+    offset: "GMT-04:00",
+    name: "America/Santiago",
+  },
+  {
+    offset: "GMT-04:00",
+    name: "America/La_Paz",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Argentina/Buenos_Aires",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Montevideo",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Araguaina",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Godthab",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Miquelon",
+  },
+  {
+    offset: "GMT-03:00",
+    name: "America/Sao_Paulo",
+  },
+  {
+    offset: "GMT-03:30",
+    name: "America/St_Johns",
+  },
+  {
+    offset: "GMT-02:00",
+    name: "America/Noronha",
+  },
+  {
+    offset: "GMT-01:00",
+    name: "Atlantic/Cape_Verde",
+  },
+  {
+    offset: "GMT",
+    name: "Europe/Belfast",
+  },
+  {
+    offset: "GMT",
+    name: "Africa/Abidjan",
+  },
+  {
+    offset: "GMT",
+    name: "Europe/Dublin",
+  },
+  {
+    offset: "GMT",
+    name: "Europe/Lisbon",
+  },
+  {
+    offset: "GMT",
+    name: "Europe/London",
+  },
+  {
+    offset: "UTC",
+    name: "UTC",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Africa/Algiers",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Africa/Windhoek",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Atlantic/Azores",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Atlantic/Stanley",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Europe/Amsterdam",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Europe/Belgrade",
+  },
+  {
+    offset: "GMT+01:00",
+    name: "Europe/Brussels",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Africa/Cairo",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Africa/Blantyre",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Asia/Beirut",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Asia/Damascus",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Asia/Gaza",
+  },
+  {
+    offset: "GMT+02:00",
+    name: "Asia/Jerusalem",
+  },
+  {
+    offset: "GMT+03:00",
+    name: "Africa/Addis_Ababa",
+  },
+  {
+    offset: "GMT+03:00",
+    name: "Asia/Riyadh89",
+  },
+  {
+    offset: "GMT+03:00",
+    name: "Europe/Minsk",
+  },
+  {
+    offset: "GMT+03:30",
+    name: "Asia/Tehran",
+  },
+  {
+    offset: "GMT+04:00",
+    name: "Asia/Dubai",
+  },
+  {
+    offset: "GMT+04:00",
+    name: "Asia/Yerevan",
+  },
+  {
+    offset: "GMT+04:00",
+    name: "Europe/Moscow",
+  },
+  {
+    offset: "GMT+04:30",
+    name: "Asia/Kabul",
+  },
+  {
+    offset: "GMT+05:00",
+    name: "Asia/Tashkent",
+  },
+  {
+    offset: "GMT+05:30",
+    name: "Asia/Kolkata",
+  },
+  {
+    offset: "GMT+05:45",
+    name: "Asia/Katmandu",
+  },
+  {
+    offset: "GMT+06:00",
+    name: "Asia/Dhaka",
+  },
+  {
+    offset: "GMT+06:00",
+    name: "Asia/Yekaterinburg",
+  },
+  {
+    offset: "GMT+06:30",
+    name: "Asia/Rangoon",
+  },
+  {
+    offset: "GMT+07:00",
+    name: "Asia/Bangkok",
+  },
+  {
+    offset: "GMT+07:00",
+    name: "Asia/Novosibirsk",
+  },
+  {
+    offset: "GMT+08:00",
+    name: "Etc/GMT+8",
+  },
+  {
+    offset: "GMT+08:00",
+    name: "Asia/Hong_Kong",
+  },
+  {
+    offset: "GMT+08:00",
+    name: "Asia/Krasnoyarsk",
+  },
+  {
+    offset: "GMT+08:00",
+    name: "Australia/Perth",
+  },
+  {
+    offset: "GMT+08:45",
+    name: "Australia/Eucla",
+  },
+  {
+    offset: "GMT+09:00",
+    name: "Asia/Irkutsk",
+  },
+  {
+    offset: "GMT+09:00",
+    name: "Asia/Seoul",
+  },
+  {
+    offset: "GMT+09:00",
+    name: "Asia/Tokyo",
+  },
+  {
+    offset: "GMT+09:30",
+    name: "Australia/Adelaide",
+  },
+  {
+    offset: "GMT+09:30",
+    name: "Australia/Darwin",
+  },
+  {
+    offset: "GMT+09:30",
+    name: "Pacific/Marquesas",
+  },
+  {
+    offset: "GMT+10:00",
+    name: "Etc/GMT+10",
+  },
+  {
+    offset: "GMT+10:00",
+    name: "Australia/Brisbane",
+  },
+  {
+    offset: "GMT+10:00",
+    name: "Australia/Hobart",
+  },
+  {
+    offset: "GMT+10:00",
+    name: "Asia/Yakutsk",
+  },
+  {
+    offset: "GMT+10:30",
+    name: "Australia/Lord_Howe",
+  },
+  {
+    offset: "GMT+11:00",
+    name: "Asia/Vladivostok",
+  },
+  {
+    offset: "GMT+11:30",
+    name: "Pacific/Norfolk",
+  },
+  {
+    offset: "GMT+12:00",
+    name: "Etc/GMT+12",
+  },
+  {
+    offset: "GMT+12:00",
+    name: "Asia/Anadyr",
+  },
+  {
+    offset: "GMT+12:00",
+    name: "Asia/Magadan",
+  },
+  {
+    offset: "GMT+12:00",
+    name: "Pacific/Auckland",
+  },
+  {
+    offset: "GMT+12:45",
+    name: "Pacific/Chatham",
+  },
+  {
+    offset: "GMT+13:00",
+    name: "Pacific/Tongatapu",
+  },
+  {
+    offset: "GMT+14:00",
+    name: "Pacific/Kiritimati",
+  },
+];
+
+// length 164
+const currency_list = [
+  { name: "US Dollar", code: "USD" },
+  { name: "Afghan Afghani", code: "AFA" },
+  { name: "Albanian Lek", code: "ALL" },
+  { name: "Algerian Dinar", code: "DZD" },
+  { name: "Angolan Kwanza", code: "AOA" },
+  { name: "Argentine Peso", code: "ARS" },
+  { name: "Armenian Dram", code: "AMD" },
+  { name: "Aruban Florin", code: "AWG" },
+  { name: "Australian Dollar", code: "AUD" },
+  { name: "Azerbaijani Manat", code: "AZN" },
+  { name: "Bahamian Dollar", code: "BSD" },
+  { name: "Bahraini Dinar", code: "BHD" },
+  { name: "Bangladeshi Taka", code: "BDT" },
+  { name: "Barbadian Dollar", code: "BBD" },
+  { name: "Belarusian Ruble", code: "BYR" },
+  { name: "Belgian Franc", code: "BEF" },
+  { name: "Belize Dollar", code: "BZD" },
+  { name: "Bermudan Dollar", code: "BMD" },
+  { name: "Bhutanese Ngultrum", code: "BTN" },
+  { name: "Bitcoin", code: "BTC" },
+  { name: "Bolivian Boliviano", code: "BOB" },
+  { name: "Bosnia-Herzegovina Convertible Mark", code: "BAM" },
+  { name: "Botswanan Pula", code: "BWP" },
+  { name: "Brazilian Real", code: "BRL" },
+  { name: "British Pound Sterling", code: "GBP" },
+  { name: "Brunei Dollar", code: "BND" },
+  { name: "Bulgarian Lev", code: "BGN" },
+  { name: "Burundian Franc", code: "BIF" },
+  { name: "Cambodian Riel", code: "KHR" },
+  { name: "Canadian Dollar", code: "CAD" },
+  { name: "Cape Verdean Escudo", code: "CVE" },
+  { name: "Cayman Islands Dollar", code: "KYD" },
+  { name: "CFA Franc BCEAO", code: "XOF" },
+  { name: "CFA Franc BEAC", code: "XAF" },
+  { name: "CFP Franc", code: "XPF" },
+  { name: "Chilean Peso", code: "CLP" },
+  { name: "Chinese Yuan", code: "CNY" },
+  { name: "Colombian Peso", code: "COP" },
+  { name: "Comorian Franc", code: "KMF" },
+  { name: "Congolese Franc", code: "CDF" },
+  { name: "Costa Rican ColÃ³n", code: "CRC" },
+  { name: "Croatian Kuna", code: "HRK" },
+  { name: "Cuban Convertible Peso", code: "CUC" },
+  { name: "Czech Republic Koruna", code: "CZK" },
+  { name: "Danish Krone", code: "DKK" },
+  { name: "Djiboutian Franc", code: "DJF" },
+  { name: "Dominican Peso", code: "DOP" },
+  { name: "East Caribbean Dollar", code: "XCD" },
+  { name: "Egyptian Pound", code: "EGP" },
+  { name: "Eritrean Nakfa", code: "ERN" },
+  { name: "Estonian Kroon", code: "EEK" },
+  { name: "Ethiopian Birr", code: "ETB" },
+  { name: "Euro", code: "EUR" },
+  { name: "Falkland Islands Pound", code: "FKP" },
+  { name: "Fijian Dollar", code: "FJD" },
+  { name: "Gambian Dalasi", code: "GMD" },
+  { name: "Georgian Lari", code: "GEL" },
+  { name: "German Mark", code: "DEM" },
+  { name: "Ghanaian Cedi", code: "GHS" },
+  { name: "Gibraltar Pound", code: "GIP" },
+  { name: "Greek Drachma", code: "GRD" },
+  { name: "Guatemalan Quetzal", code: "GTQ" },
+  { name: "Guinean Franc", code: "GNF" },
+  { name: "Guyanaese Dollar", code: "GYD" },
+  { name: "Haitian Gourde", code: "HTG" },
+  { name: "Honduran Lempira", code: "HNL" },
+  { name: "Hong Kong Dollar", code: "HKD" },
+  { name: "Hungarian Forint", code: "HUF" },
+  { name: "Icelandic KrÃ³na", code: "ISK" },
+  { name: "Indian Rupee", code: "INR" },
+  { name: "Indonesian Rupiah", code: "IDR" },
+  { name: "Iranian Rial", code: "IRR" },
+  { name: "Iraqi Dinar", code: "IQD" },
+  { name: "Israeli New Sheqel", code: "ILS" },
+  { name: "Italian Lira", code: "ITL" },
+  { name: "Jamaican Dollar", code: "JMD" },
+  { name: "Japanese Yen", code: "JPY" },
+  { name: "Jordanian Dinar", code: "JOD" },
+  { name: "Kazakhstani Tenge", code: "KZT" },
+  { name: "Kenyan Shilling", code: "KES" },
+  { name: "Kuwaiti Dinar", code: "KWD" },
+  { name: "Kyrgystani Som", code: "KGS" },
+  { name: "Laotian Kip", code: "LAK" },
+  { name: "Latvian Lats", code: "LVL" },
+  { name: "Lebanese Pound", code: "LBP" },
+  { name: "Lesotho Loti", code: "LSL" },
+  { name: "Liberian Dollar", code: "LRD" },
+  { name: "Libyan Dinar", code: "LYD" },
+  { name: "Lithuanian Litas", code: "LTL" },
+  { name: "Macanese Pataca", code: "MOP" },
+  { name: "Macedonian Denar", code: "MKD" },
+  { name: "Malagasy Ariary", code: "MGA" },
+  { name: "Malawian Kwacha", code: "MWK" },
+  { name: "Malaysian Ringgit", code: "MYR" },
+  { name: "Maldivian Rufiyaa", code: "MVR" },
+  { name: "Mauritanian Ouguiya", code: "MRO" },
+  { name: "Mauritian Rupee", code: "MUR" },
+  { name: "Mexican Peso", code: "MXN" },
+  { name: "Moldovan Leu", code: "MDL" },
+  { name: "Mongolian Tugrik", code: "MNT" },
+  { name: "Moroccan Dirham", code: "MAD" },
+  { name: "Mozambican Metical", code: "MZM" },
+  { name: "Myanmar Kyat", code: "MMK" },
+  { name: "Namibian Dollar", code: "NAD" },
+  { name: "Nepalese Rupee", code: "NPR" },
+  { name: "Netherlands Antillean Guilder", code: "ANG" },
+  { name: "New Taiwan Dollar", code: "TWD" },
+  { name: "New Zealand Dollar", code: "NZD" },
+  { name: "Nicaraguan CÃ³rdoba", code: "NIO" },
+  { name: "Nigerian Naira", code: "NGN" },
+  { name: "North Korean Won", code: "KPW" },
+  { name: "Norwegian Krone", code: "NOK" },
+  { name: "Omani Rial", code: "OMR" },
+  { name: "Pakistani Rupee", code: "PKR" },
+  { name: "Panamanian Balboa", code: "PAB" },
+  { name: "Papua New Guinean Kina", code: "PGK" },
+  { name: "Paraguayan Guarani", code: "PYG" },
+  { name: "Peruvian Nuevo Sol", code: "PEN" },
+  { name: "Philippine Peso", code: "PHP" },
+  { name: "Polish Zloty", code: "PLN" },
+  { name: "Qatari Rial", code: "QAR" },
+  { name: "Romanian Leu", code: "RON" },
+  { name: "Russian Ruble", code: "RUB" },
+  { name: "Rwandan Franc", code: "RWF" },
+  { name: "Salvadoran ColÃ³n", code: "SVC" },
+  { name: "Samoan Tala", code: "WST" },
+  { name: "Saudi Riyal", code: "SAR" },
+  { name: "Serbian Dinar", code: "RSD" },
+  { name: "Seychellois Rupee", code: "SCR" },
+  { name: "Sierra Leonean Leone", code: "SLL" },
+  { name: "Singapore Dollar", code: "SGD" },
+  { name: "Slovak Koruna", code: "SKK" },
+  { name: "Solomon Islands Dollar", code: "SBD" },
+  { name: "Somali Shilling", code: "SOS" },
+  { name: "South African Rand", code: "ZAR" },
+  { name: "South Korean Won", code: "KRW" },
+  { name: "Special Drawing Rights", code: "XDR" },
+  { name: "Sri Lankan Rupee", code: "LKR" },
+  { name: "St. Helena Pound", code: "SHP" },
+  { name: "Sudanese Pound", code: "SDG" },
+  { name: "Surinamese Dollar", code: "SRD" },
+  { name: "Swazi Lilangeni", code: "SZL" },
+  { name: "Swedish Krona", code: "SEK" },
+  { name: "Swiss Franc", code: "CHF" },
+  { name: "Syrian Pound", code: "SYP" },
+  { name: "São Tomé and Príncipe Dobra", code: "STD" },
+  { name: "Tajikistani Somoni", code: "TJS" },
+  { name: "Tanzanian Shilling", code: "TZS" },
+  { name: "Thai Baht", code: "THB" },
+  { name: "Tongan Pa'anga", code: "TOP" },
+  { name: "Trinidad & Tobago Dollar", code: "TTD" },
+  { name: "Tunisian Dinar", code: "TND" },
+  { name: "Turkish Lira", code: "TRY" },
+  { name: "Turkmenistani Manat", code: "TMT" },
+  { name: "Ugandan Shilling", code: "UGX" },
+  { name: "Ukrainian Hryvnia", code: "UAH" },
+  { name: "United Arab Emirates Dirham", code: "AED" },
+  { name: "Uruguayan Peso", code: "UYU" },
+
+  { name: "Uzbekistan Som", code: "UZS" },
+  { name: "Vanuatu Vatu", code: "VUV" },
+  { name: "Venezuelan BolÃvar", code: "VEF" },
+  { name: "Vietnamese Dong", code: "VND" },
+  { name: "Yemeni Rial", code: "YER" },
+  { name: "Zambian Kwacha", code: "ZMK" },
+];
+
+export { currency_list, movies, options1, options2, timezones };

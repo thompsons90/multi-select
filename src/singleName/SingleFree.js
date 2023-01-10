@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import { Autocomplete, TextField } from "@mui/material";
-import { options2 } from "../utils/data";
 
 const SingleFree = () => {
   const [value, setValue] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
-  console.log(`value: ${value}, selected value: ${selectedValue}`);
+  // console.log(`value: ${value}, selected value: ${selectedValue}`);
 
-  // const [options, setOptions] = useState([
-  //   "Manager",
-  //   "Frontend",
-  //   "Backend",
-  //   "Fullstack",
-  //   "Associate",
-  // ]);
+  const [options, setOptions] = useState([
+    "Manager",
+    "Frontend",
+    "Backend",
+    "Fullstack",
+    "Associate",
+  ]);
   // console.log(`options: ${options}`);
-  const options = ["Manager", "Frontend", "Backend", "Fullstack", "Associate"];
+  // const options = ["Manager", "Frontend", "Backend", "Fullstack", "Associate"];
 
   // DO NOT DELETE this section stores the user input and then add it to the value once submitted
   const [inputValue, setInputValue] = useState("");
 
   const addPosition = (position) => {
     let addedPosition = position;
-    setValue([...value, addedPosition]);
+    setValue((value) => [...value, addedPosition]);
+    setOptions((options) => [...options, addedPosition]);
+    // setOptions((position) => [...position, addedPosition]);
     setSelectedValue("");
+    // console.log(`position ${position}`);
   };
 
   // const addPosition = (selectedValue) => {
@@ -43,10 +45,13 @@ const SingleFree = () => {
         options={options}
         // getOptionLabel={options}
         inputValue={selectedValue}
-        onChange={(event, newValue) => {
-          setValue(newValue);
+        onChange={(e, value) => {
+          // console.log(`newValue ${value}`);
+          //   This sets the value state to either the inputted value or an empty string
+          setValue(value || "");
         }}
-        onInputChange={(event, newSelectedValue) => {
+        onInputChange={(e, newSelectedValue) => {
+          // console.log(`newSelectedValue ${newSelectedValue}`);
           setSelectedValue(newSelectedValue);
           setInputValue(newSelectedValue);
         }}
@@ -68,12 +73,12 @@ const SingleFree = () => {
         )}
       />
       <button
-        style={{
-          visibility:
-            value.length < 1 && selectedValue && selectedValue.length !== 0
-              ? "visible"
-              : "hidden",
-        }}
+        // style={{
+        //   visibility:
+        //     value.length < 1 && selectedValue && selectedValue.length !== 0
+        //       ? "visible"
+        //       : "hidden",
+        // }}
         onClick={() => addPosition(selectedValue)}
       >
         Add {selectedValue}

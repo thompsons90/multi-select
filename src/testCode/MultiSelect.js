@@ -12,6 +12,7 @@ const MultiSelect = () => {
     data.employees.map((data) => {
       // console.log(data.name);
       options.push(data.name);
+      return data.name;
     });
   });
 
