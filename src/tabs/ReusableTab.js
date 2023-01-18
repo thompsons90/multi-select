@@ -16,7 +16,7 @@ import IntegrationPage from "../pages/Integrations";
 import NotificationPage from "../pages/Notifications";
 import PreferencePage from "../pages/Preferences";
 import TimePage from "../pages/Time";
-import { AppContext } from "./AppContext";
+import { AppContext } from "../components/AppContext";
 
 function TabPanel(props) {
   const { children, index, value, ...other } = props;

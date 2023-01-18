@@ -11,8 +11,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import BasicTabs from "./components/Appbar";
-import TabsTwo from "./components/TabsTwo";
-import TabExample from "./components/Tabs";
+import TabsTwo from "./tabs/TabsTwo";
+import TabExample from "./tabs/Tabs";
 import { CopyCheck } from "./a1Check/CopyCheck";
 import { CheckOne } from "./a1Check/CheckOne";
 import { CheckTwo } from "./a1Check/CheckTwo";
@@ -32,9 +32,17 @@ function App() {
   return (
     <div className="App">
       <div>
+        <BasicTabs />
+      </div>
+
+      <div>
+        <TabExample />
+      </div>
+
+      <div>
         <ModalComp />
       </div>
-      <div>
+      {/* <div>
         <h1>Notifications</h1>
         <p>Set up automatic schedule emails and time tracking reminders.</p>
         <Notifications />
@@ -43,9 +51,9 @@ function App() {
         <h1>Hours & currency</h1>
         <p>Update your team's scheduled working hours.</p>
         <HoursCurrency />
-      </div>
-
-      {/* <button onClick={() => setShow(!show)}>Dropdowns</button>
+      </div> */}
+      {/* 
+      <button onClick={() => setShow(!show)}>Dropdowns</button>
       {show && (
         <>
           <div>
@@ -56,13 +64,7 @@ function App() {
             <CopyCheck />
           </div>
 
-          <div>
-            <BasicTabs />
-          </div>
-
-          <div>
-            <TabExample />
-          </div>
+        
         </>
       )}
       <button onClick={() => setShow(!show)}>Dropdowns</button>
