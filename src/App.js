@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      {/* <div>
         <BasicTabs />
       </div>
 
@@ -41,7 +41,7 @@ function App() {
 
       <div>
         <ModalComp />
-      </div>
+      </div> */}
       {/* <div>
         <h1>Notifications</h1>
         <p>Set up automatic schedule emails and time tracking reminders.</p>
@@ -52,8 +52,8 @@ function App() {
         <p>Update your team's scheduled working hours.</p>
         <HoursCurrency />
       </div> */}
-      {/* 
-      <button onClick={() => setShow(!show)}>Dropdowns</button>
+
+      {/* <button onClick={() => setShow(!show)}>Dropdowns</button>
       {show && (
         <>
           <div>
@@ -63,10 +63,8 @@ function App() {
           <div>
             <CopyCheck />
           </div>
-
-        
         </>
-      )}
+      )} */}
       <button onClick={() => setShow(!show)}>Dropdowns</button>
       {show && (
         <>
@@ -94,7 +92,7 @@ function App() {
             <SingleSelect />
           </div>
         </>
-      )} */}
+      )}
     </div>
   );
 }
