@@ -20,6 +20,9 @@ import NewCheck from "./a1Check/NewCheck";
 import Notifications from "./Notifications";
 import HoursCurrency from "./Hours";
 import { ModalComp } from "./modal/ModalComp";
+import ChipEx from "./components/ChipEx";
+import { FreeSoloEx } from "./components/FreeSoloEx";
+import TabContainer from "./tabs/TabContainer";
 
 const Button_Wrapper_Styles = {
   position: "relative",
@@ -31,7 +34,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div>
+      {/* <ChipEx /> */}
+      {/* <FreeSoloEx /> */}
+      <div>
         <BasicTabs />
       </div>
 
@@ -40,8 +45,11 @@ function App() {
       </div>
 
       <div>
-        <ModalComp />
-      </div> */}
+        <TabContainer />
+      </div>
+      <div>
+        <ModalComp content={<TabContainer />} />
+      </div>
       {/* <div>
         <h1>Notifications</h1>
         <p>Set up automatic schedule emails and time tracking reminders.</p>
