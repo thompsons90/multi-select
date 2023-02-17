@@ -13,7 +13,7 @@ const Tag = () => {
     setTagValue([...tagValue, newTag]);
     setSelectedTag("");
   };
-  console.log(`SELECTED TAG: ${selectedTag} TAG VALUE: ${tagValue}`);
+  // console.log(`SELECTED TAG: ${selectedTag} TAG VALUE: ${tagValue}`);
   return (
     <>
       <h2>Tags</h2>

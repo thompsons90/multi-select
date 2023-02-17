@@ -36,10 +36,10 @@ const NewCheck = () => {
   // if data.isChecked === true && data.hours > 0
   // need an else if
   // leave intial value to
-  console.log(timeAssignment);
+  // console.log(timeAssignment);
   const handleCheckboxChange = (data, e) => {
     // console.log(`first`);
-    console.log(`EVENT: ${e.target.value} ID: ${data.id}`);
+    // console.log(`EVENT: ${e.target.value} ID: ${data.id}`);
     setTimeAssignment(
       timeAssignment.map((checked) => {
         if (checked.id === data.id) {
@@ -60,7 +60,7 @@ const NewCheck = () => {
   const checkboxReaction = (e) => {
     timeAssignment.map((data) => {
       if (data.isChecked === true) {
-        console.log(`DATA:  ${data.id} ${data.isChecked} ${data.hours} `);
+        // console.log(`DATA:  ${data.id} ${data.isChecked} ${data.hours} `);
       }
     });
     // console.log(`DATA:  ${data.id} ${data.isChecked} ${data.hours} `);
@@ -87,7 +87,7 @@ const NewCheck = () => {
   //   }
   // });
   const handleEdit = (id, e) => {
-    console.log(`&&& ID: ${id}, VALUE: ${e.target.value}`);
+    // console.log(`&&& ID: ${id}, VALUE: ${e.target.value}`);
 
     setTimeAssignment(
       timeAssignment.map((time) => {

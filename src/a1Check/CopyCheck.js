@@ -40,9 +40,9 @@ export const CopyCheck = () => {
   const handleCheckboxChange = (e) => {
     const value = e.target.value;
     setChecked({ ...checked, [e.target.value]: e.target.checked });
-    console.log(
-      `&&&&&&&& ${e.target.value} ${e.target.checked} ${e.target.name}`
-    );
+    // console.log(
+    //   `&&&&&&&& ${e.target.value} ${e.target.checked} ${e.target.name}`
+    // );
   };
 
   // this handler function is used for the right side column key value pair; ie. { sunHours: ''}
@@ -56,10 +56,10 @@ export const CopyCheck = () => {
     // if the object includes not an empty string, set the checkbox to true
 
     if (e.target.name !== "") {
-      console.log(` $$$$$$$$$$ ${e.target.name} ${e.target.value}`);
+      // console.log(` $$$$$$$$$$ ${e.target.name} ${e.target.value}`);
       setChecked({ ...checked, Sunday: true });
     } else {
-      console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+      // console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
     }
   };
 
@@ -79,7 +79,7 @@ export const CopyCheck = () => {
     // if ()
   };
 
-  console.log(checked);
+  // console.log(checked);
   return (
     <div>
       <Typography id="modal-modal-title" variant="h6" component="h2">

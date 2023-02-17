@@ -29,9 +29,9 @@ export const ModalComp = ({ header, header1, children1, content }) => {
   ];
   const handleStatusChange = (e, id, newStatus) => {
     setInviteStatus(newStatus);
-    console.log(`ID: ${id}`);
+    // console.log(`ID: ${id}`);
   };
-  console.log(inviteStatus);
+  // console.log(inviteStatus);
 
   const page1 = [
     { id: 0, header: "Clients", page: <ClientPage /> },

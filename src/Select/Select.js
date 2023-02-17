@@ -20,7 +20,7 @@ const SelectDay = () => {
     "Friday",
     "Saturday",
   ];
-  console.log(day);
+  // console.log(day);
   return (
     <Box sx={{ minWidth: 300 }}>
       <p>When?</p>

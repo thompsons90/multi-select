@@ -18,7 +18,7 @@ const ButtonGroup1 = () => {
   const handleChange = (event, newSelected) => {
     setSelected(newSelected);
   };
-  console.log(selected);
+  // console.log(selected);
   return (
     <>
       <p>Frequency</p>

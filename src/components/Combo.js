@@ -5,7 +5,7 @@ import { options2 } from "../utils/data";
 const Combo = () => {
   const [value, setValue] = useState([]);
   const [selectedValue, setSelectedValue] = useState("");
-  console.log(`value: ${value}, selected value: ${selectedValue}`);
+  // console.log(`value: ${value}, selected value: ${selectedValue}`);
 
   const options = []; // this array holds all employee names to select from
   const vals = Object.values(options2);

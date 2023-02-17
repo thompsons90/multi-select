@@ -23,7 +23,7 @@ export const CheckTwo = () => {
   });
   const { Monday, Tuesday, Wednesday } = hours;
 
-  console.log(skills);
+  // console.log(skills);
   const handleChange = (e) => {
     setAccept(e.target.checked);
   };
@@ -51,7 +51,7 @@ export const CheckTwo = () => {
     const value = e.target.value;
     setHours({ ...hours, [e.target.name]: value });
   };
-  console.log(hours);
+  // console.log(hours);
   return (
     <>
       {/* <Box>

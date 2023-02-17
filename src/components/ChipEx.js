@@ -28,9 +28,9 @@ export default function ChipEx() {
     let newTag = tag;
     setVal([...val, newTag]);
     setSelectedTag("");
-    console.log(`TAG: ${tag}, SELECT: ${selectedTag}`);
+    // console.log(`TAG: ${tag}, SELECT: ${selectedTag}`);
   };
-  console.log(selectedTag);
+  // console.log(selectedTag);
   return (
     <div style={{ width: 500 }}>
       <Autocomplete

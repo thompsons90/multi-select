@@ -33,7 +33,7 @@ const HoursCurrency = (props) => {
     setCurrency(e.target.value);
   };
 
-  console.log(timezones);
+  // console.log(timezones);
   return (
     <main>
       <MemoizedNavbar />

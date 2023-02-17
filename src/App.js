@@ -23,6 +23,9 @@ import { ModalComp } from "./modal/ModalComp";
 import ChipEx from "./components/ChipEx";
 import { FreeSoloEx } from "./components/FreeSoloEx";
 import TabContainer from "./tabs/TabContainer";
+import Child from "./components/Child";
+import Parent1 from "./Parent1";
+import Parent2 from "./Parent2";
 
 const Button_Wrapper_Styles = {
   position: "relative",
@@ -34,8 +37,12 @@ function App() {
 
   return (
     <div className="App">
+      <Parent1 />
       {/* <ChipEx /> */}
       {/* <FreeSoloEx /> */}
+      <div>
+        <Parent2 />
+      </div>
       <div>
         <BasicTabs />
       </div>

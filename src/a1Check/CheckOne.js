@@ -41,7 +41,7 @@ export const CheckOne = () => {
   // };
   const onTextChange = (e) => setTextValue(e.target.value);
 
-  console.log(checked);
+  // console.log(checked);
   return (
     <div>
       <Typography id="modal-modal-title" variant="h6" component="h2">
